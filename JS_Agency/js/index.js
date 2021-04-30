@@ -1,6 +1,6 @@
 $('document').ready(function(){
-    const windowWidth = $(window).width();
-    const windowS = $(window).scrollTop();
+    let windowWidth = $(window).width();
+    let windowS = $(window).scrollTop();
     $('a').click(function(e){
         e.preventDefault();
     });
@@ -13,6 +13,7 @@ $('document').ready(function(){
         webJs();
     }
     $(window).resize(function(){
+        windowWidth = $(window).width();
         console.log(windowWidth);
         if(windowWidth<800){
             mobJs();
@@ -24,6 +25,7 @@ $('document').ready(function(){
     // 윈도우 사이즈별 스크립트
 
     function commonJs(){
+        let $section = $('.section');
         $('.gnb_logo').click(function(){
             $section.removeAttr('style');
             $('#main_container').fadeIn(300);
