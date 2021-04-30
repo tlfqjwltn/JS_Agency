@@ -1,0 +1,667 @@
+/* reset.scss */
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap");
+* {
+  box-sizing: border-box; }
+
+body {
+  line-height: 1; }
+
+html, body, div, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, address, dl, dt, dd, ol, ul, li, fieldset, form, legend, table, caption, tbody, tfoot, thead, tr, th, td, input, select, textarea {
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%; }
+
+img, fieldset {
+  border: 0px; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+ul, ol, li {
+  list-style: none; }
+
+address, em {
+  font-style: normal; }
+
+li img, object {
+  vertical-align: top; }
+
+input, select, textarea, form img {
+  vertical-align: middle; }
+
+a {
+  outline: 0;
+  text-decoration: none;
+  border: none;
+  color: #444; }
+
+body {
+  font: 16px /1.2 'Nanum Gothic',"Noto Sans KR", arial;
+  color: #333;
+  font-weight: 400; }
+
+.noMargin {
+  margin: 0px; }
+
+* {
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  border: 0; }
+
+header, section, footer, aside, nav, main, article, figure {
+  display: block; }
+
+.floatClear:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.hidden {
+  display: none; }
+
+.blind {
+  display: block;
+  text-indent: -2000px;
+  overflow: hidden; }
+
+/*
+ * Nanum Pen Script (Korean) http://www.google.com/fonts/earlyaccess
+ */
+@font-face {
+  font-family: 'Nanum Pen Script';
+  font-style: normal;
+  font-weight: 400;
+  src: url(http://fonts.gstatic.com/ea/nanumpenscript/v4/NanumPenScript-Regular.eot);
+  src: url(http://fonts.gstatic.com/ea/nanumpenscript/v4/NanumPenScript-Regular.eot?#iefix) format("embedded-opentype"), url(http://fonts.gstatic.com/ea/nanumpenscript/v4/NanumPenScript-Regular.woff2) format("woff2"), url(http://fonts.gstatic.com/ea/nanumpenscript/v4/NanumPenScript-Regular.woff) format("woff"), url(http://fonts.gstatic.com/ea/nanumpenscript/v4/NanumPenScript-Regular.ttf) format("truetype"); }
+/*
+ * Nanum Gothic (Korean) http://www.google.com/fonts/earlyaccess
+ */
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(http://fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.eot);
+  src: url(http://fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.eot?#iefix) format("embedded-opentype"), url(http://fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.woff2) format("woff2"), url(http://fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.woff) format("woff"), url(http://fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.ttf) format("truetype"); }
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: url(http://fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.eot);
+  src: url(http://fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.eot?#iefix) format("embedded-opentype"), url(http://fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.woff2) format("woff2"), url(http://fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.woff) format("woff"), url(http://fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.ttf) format("truetype"); }
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 800;
+  src: url(http://fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.eot);
+  src: url(http://fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.eot?#iefix) format("embedded-opentype"), url(http://fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.woff2) format("woff2"), url(http://fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.woff) format("woff"), url(http://fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.ttf) format("truetype"); }
+/*
+ * Nanum Myeongjo (Korean) http://www.google.com/fonts/earlyaccess
+ */
+@font-face {
+  font-family: 'Nanum Myeongjo';
+  font-style: normal;
+  font-weight: 400;
+  src: url(http://fonts.gstatic.com/ea/nanummyeongjo/v4/NanumMyeongjo-Regular.eot);
+  src: url(http://fonts.gstatic.com/ea/nanummyeongjo/v4/NanumMyeongjo-Regular.eot?#iefix) format("embedded-opentype"), url(http://fonts.gstatic.com/ea/nanummyeongjo/v4/NanumMyeongjo-Regular.woff2) format("woff2"), url(http://fonts.gstatic.com/ea/nanummyeongjo/v4/NanumMyeongjo-Regular.woff) format("woff"), url(http://fonts.gstatic.com/ea/nanummyeongjo/v4/NanumMyeongjo-Regular.ttf) format("truetype"); }
+@font-face {
+  font-family: 'Nanum Myeongjo';
+  font-style: normal;
+  font-weight: 600;
+  src: url(http://fonts.gstatic.com/ea/nanummyeongjo/v4/NanumMyeongjo-Bold.eot);
+  src: url(http://fonts.gstatic.com/ea/nanummyeongjo/v4/NanumMyeongjo-Bold.eot?#iefix) format("embedded-opentype"), url(http://fonts.gstatic.com/ea/nanummyeongjo/v4/NanumMyeongjo-Bold.woff2) format("woff2"), url(http://fonts.gstatic.com/ea/nanummyeongjo/v4/NanumMyeongjo-Bold.woff) format("woff"), url(http://fonts.gstatic.com/ea/nanummyeongjo/v4/NanumMyeongjo-Bold.ttf) format("truetype"); }
+@font-face {
+  font-family: 'Nanum Myeongjo';
+  font-style: normal;
+  font-weight: 700;
+  src: url(http://fonts.gstatic.com/ea/nanummyeongjo/v4/NanumMyeongjo-ExtraBold.eot);
+  src: url(http://fonts.gstatic.com/ea/nanummyeongjo/v4/NanumMyeongjo-ExtraBold.eot?#iefix) format("embedded-opentype"), url(http://fonts.gstatic.com/ea/nanummyeongjo/v4/NanumMyeongjo-ExtraBold.woff2) format("woff2"), url(http://fonts.gstatic.com/ea/nanummyeongjo/v4/NanumMyeongjo-ExtraBold.woff) format("woff"), url(http://fonts.gstatic.com/ea/nanummyeongjo/v4/NanumMyeongjo-ExtraBold.ttf) format("truetype"); }
+/*
+ * Nanum Gothic Coding (Korean) http://www.google.com/fonts/earlyaccess
+ */
+@font-face {
+  font-family: 'Nanum Gothic Coding';
+  font-style: normal;
+  font-weight: 400;
+  src: url(http://fonts.gstatic.com/ea/nanumgothiccoding/v4/NanumGothicCoding-Regular.eot);
+  src: url(http://fonts.gstatic.com/ea/nanumgothiccoding/v4/NanumGothicCoding-Regular.eot?#iefix) format("embedded-opentype"), url(http://fonts.gstatic.com/ea/nanumgothiccoding/v4/NanumGothicCoding-Regular.woff2) format("woff2"), url(http://fonts.gstatic.com/ea/nanumgothiccoding/v4/NanumGothicCoding-Regular.woff) format("woff"), url(http://fonts.gstatic.com/ea/nanumgothiccoding/v4/NanumGothicCoding-Regular.ttf) format("truetype"); }
+@font-face {
+  font-family: 'Nanum Gothic Coding';
+  font-style: normal;
+  font-weight: 700;
+  src: url(http://fonts.gstatic.com/ea/nanumgothiccoding/v4/NanumGothicCoding-Bold.eot);
+  src: url(http://fonts.gstatic.com/ea/nanumgothiccoding/v4/NanumGothicCoding-Bold.eot?#iefix) format("embedded-opentype"), url(http://fonts.gstatic.com/ea/nanumgothiccoding/v4/NanumGothicCoding-Bold.woff2) format("woff2"), url(http://fonts.gstatic.com/ea/nanumgothiccoding/v4/NanumGothicCoding-Bold.woff) format("woff"), url(http://fonts.gstatic.com/ea/nanumgothiccoding/v4/NanumGothicCoding-Bold.ttf) format("truetype"); }
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 100;
+  src: url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff2) format("woff2"), url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff) format("woff"), url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.otf) format("opentype"); }
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 300;
+  src: url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2) format("woff2"), url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff) format("woff"), url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf) format("opentype"); }
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 400;
+  src: url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2) format("woff2"), url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff) format("woff"), url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf) format("opentype"); }
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 500;
+  src: url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff2) format("woff2"), url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff) format("woff"), url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.otf) format("opentype"); }
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 700;
+  src: url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format("woff2"), url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format("woff"), url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format("opentype"); }
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 900;
+  src: url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff2) format("woff2"), url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff) format("woff"), url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf) format("opentype"); }
+body, html {
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #000; }
+  body #wrap, html #wrap {
+    width: 100vw;
+    position: relative; }
+    body #wrap #gnb, html #wrap #gnb {
+      width: 100%;
+      height: 80px;
+      line-height: 80px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      z-index: 10000;
+      font-family: 'Oswald','Nanum Gothic',"Noto Sans KR",'sans-serif'; }
+      body #wrap #gnb .gnb_logo, html #wrap #gnb .gnb_logo {
+        font-size: 38px;
+        margin-left: 3%; }
+        body #wrap #gnb .gnb_logo a, html #wrap #gnb .gnb_logo a {
+          color: #fff;
+          transition: color .5s; }
+          body #wrap #gnb .gnb_logo a:hover, html #wrap #gnb .gnb_logo a:hover {
+            color: #f6685e; }
+      body #wrap #gnb .gnb_wrap, html #wrap #gnb .gnb_wrap {
+        display: flex;
+        font-size: 24px;
+        padding-top: 7px;
+        margin-left: 50%;
+        z-index: 100000; }
+        body #wrap #gnb .gnb_wrap .gnb_font, html #wrap #gnb .gnb_wrap .gnb_font {
+          margin-left: 20px; }
+          body #wrap #gnb .gnb_wrap .gnb_font a, html #wrap #gnb .gnb_wrap .gnb_font a {
+            color: #fff;
+            transition: color .5s; }
+            body #wrap #gnb .gnb_wrap .gnb_font a:hover, html #wrap #gnb .gnb_wrap .gnb_font a:hover {
+              color: #f6685e; }
+        body #wrap #gnb .gnb_wrap .m_gnb, body #wrap #gnb .gnb_wrap .m_gnb_menu, html #wrap #gnb .gnb_wrap .m_gnb, html #wrap #gnb .gnb_wrap .m_gnb_menu {
+          display: none; }
+    body #wrap #landing_container, html #wrap #landing_container {
+      width: 100vw;
+      min-height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #000; }
+    body #wrap #main_container, html #wrap #main_container {
+      width: 100vw;
+      height: 100vh;
+      background-image: url(../img/main_bg.jpg);
+      background-size: 100vw 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      display: none; }
+      body #wrap #main_container .main_tit, html #wrap #main_container .main_tit {
+        position: absolute;
+        font-size: 96px;
+        left: 10%;
+        top: 25%;
+        font-weight: 300;
+        color: #f6685e; }
+      body #wrap #main_container .main_txt, html #wrap #main_container .main_txt {
+        position: absolute;
+        font-size: 32px;
+        left: 10%;
+        top: 55%;
+        font-weight: 300;
+        color: #fff; }
+      body #wrap #main_container .btn_models, html #wrap #main_container .btn_models {
+        position: absolute;
+        display: block;
+        width: 200px;
+        height: 50px;
+        border: 1px solid #fff;
+        color: #fff;
+        text-align: center;
+        line-height: 50px;
+        bottom: 20%;
+        left: 10%; }
+        body #wrap #main_container .btn_models:hover, html #wrap #main_container .btn_models:hover {
+          border: 1px solid #f6685e;
+          background-color: #f6685e; }
+    body #wrap #models_container, html #wrap #models_container {
+      width: 100vw;
+      min-height: 100vh;
+      z-index: 20;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #000;
+      display: none; }
+      body #wrap #models_container .models_tit, html #wrap #models_container .models_tit {
+        font-size: 66px;
+        position: absolute;
+        left: 50%;
+        margin-left: -142.5px;
+        top: 20%;
+        color: #f6685e;
+        letter-spacing: 12px; }
+      body #wrap #models_container .models_wrap, html #wrap #models_container .models_wrap {
+        width: 90vw;
+        height: 200vh;
+        background: #1D1D1D;
+        position: absolute;
+        left: 50%;
+        margin-left: -45vw;
+        top: 40%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 0; }
+        body #wrap #models_container .models_wrap li, html #wrap #models_container .models_wrap li {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          display: flex;
+          align-items: center; }
+          body #wrap #models_container .models_wrap li .models_history, html #wrap #models_container .models_wrap li .models_history {
+            width: 50%;
+            text-align: center;
+            vertical-align: middle;
+            color: #fff;
+            font-size: 18px; }
+          body #wrap #models_container .models_wrap li .models_name, html #wrap #models_container .models_wrap li .models_name {
+            width: 50%;
+            text-align: center;
+            color: #f6685e;
+            font-size: 42px;
+            font-weight: 400; }
+          body #wrap #models_container .models_wrap li img, html #wrap #models_container .models_wrap li img {
+            position: absolute;
+            z-index: 500; }
+          body #wrap #models_container .models_wrap li.models_box1, html #wrap #models_container .models_wrap li.models_box1 {
+            grid-column: 1/3;
+            grid-row: 1/2; }
+            body #wrap #models_container .models_wrap li.models_box1 img, html #wrap #models_container .models_wrap li.models_box1 img {
+              left: 0; }
+          body #wrap #models_container .models_wrap li.models_box2, html #wrap #models_container .models_wrap li.models_box2 {
+            grid-column: 3/5;
+            grid-row: 1/2; }
+            body #wrap #models_container .models_wrap li.models_box2 img, html #wrap #models_container .models_wrap li.models_box2 img {
+              left: 0; }
+          body #wrap #models_container .models_wrap li.models_box3, html #wrap #models_container .models_wrap li.models_box3 {
+            grid-column: 1/3;
+            grid-row: 2/3; }
+            body #wrap #models_container .models_wrap li.models_box3 img, html #wrap #models_container .models_wrap li.models_box3 img {
+              right: 0; }
+          body #wrap #models_container .models_wrap li.models_box4, html #wrap #models_container .models_wrap li.models_box4 {
+            grid-column: 3/5;
+            grid-row: 2/3; }
+            body #wrap #models_container .models_wrap li.models_box4 img, html #wrap #models_container .models_wrap li.models_box4 img {
+              right: 0; }
+          body #wrap #models_container .models_wrap li.models_box5, html #wrap #models_container .models_wrap li.models_box5 {
+            grid-column: 1/3;
+            grid-row: 3/4; }
+            body #wrap #models_container .models_wrap li.models_box5 img, html #wrap #models_container .models_wrap li.models_box5 img {
+              left: 0; }
+          body #wrap #models_container .models_wrap li.models_box6, html #wrap #models_container .models_wrap li.models_box6 {
+            grid-column: 3/5;
+            grid-row: 3/4; }
+            body #wrap #models_container .models_wrap li.models_box6 img, html #wrap #models_container .models_wrap li.models_box6 img {
+              left: 0; }
+          body #wrap #models_container .models_wrap li.models_box7, html #wrap #models_container .models_wrap li.models_box7 {
+            grid-column: 1/3;
+            grid-row: 4/5; }
+            body #wrap #models_container .models_wrap li.models_box7 img, html #wrap #models_container .models_wrap li.models_box7 img {
+              right: 0; }
+          body #wrap #models_container .models_wrap li.models_box8, html #wrap #models_container .models_wrap li.models_box8 {
+            grid-column: 3/5;
+            grid-row: 4/5; }
+            body #wrap #models_container .models_wrap li.models_box8 img, html #wrap #models_container .models_wrap li.models_box8 img {
+              right: 0; }
+    body #wrap #about_container, html #wrap #about_container {
+      width: 100vw;
+      min-height: 100vh;
+      z-index: 20;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #000;
+      display: none; }
+      body #wrap #about_container .about_tit, html #wrap #about_container .about_tit {
+        font-size: 66px;
+        position: absolute;
+        left: 50%;
+        margin-left: -211px;
+        top: 20%;
+        color: #f6685e;
+        letter-spacing: 12px; }
+      body #wrap #about_container .about_wrap, html #wrap #about_container .about_wrap {
+        width: 90vw;
+        height: 745px;
+        display: flex;
+        position: absolute;
+        left: 50%;
+        margin-left: -45vw;
+        top: 40%;
+        background: #1D1D1D; }
+        body #wrap #about_container .about_wrap li, html #wrap #about_container .about_wrap li {
+          width: 50%;
+          height: 100%; }
+          body #wrap #about_container .about_wrap li.about_L, html #wrap #about_container .about_wrap li.about_L {
+            width: 50%;
+            position: absolute;
+            left: 0; }
+            body #wrap #about_container .about_wrap li.about_L p, html #wrap #about_container .about_wrap li.about_L p {
+              color: #fff;
+              width: 80%;
+              text-align: center;
+              position: absolute;
+              top: 40%; }
+          body #wrap #about_container .about_wrap li.about_R, html #wrap #about_container .about_wrap li.about_R {
+            position: absolute;
+            right: 0; }
+    body #wrap #apply_container, html #wrap #apply_container {
+      width: 100vw;
+      min-height: 100vh;
+      z-index: 20;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #000;
+      display: none; }
+      body #wrap #apply_container .apply_tit, html #wrap #apply_container .apply_tit {
+        font-size: 66px;
+        position: absolute;
+        left: 50%;
+        margin-left: -447px;
+        top: 20%;
+        color: #f6685e;
+        letter-spacing: 12px; }
+      body #wrap #apply_container .apply_wrap, html #wrap #apply_container .apply_wrap {
+        width: 90vw;
+        position: absolute;
+        left: 50%;
+        margin-left: -45vw;
+        top: 40%;
+        background: #1D1D1D; }
+        body #wrap #apply_container .apply_wrap fieldset, html #wrap #apply_container .apply_wrap fieldset {
+          width: 50vw;
+          height: 80%;
+          margin: 0 auto; }
+          body #wrap #apply_container .apply_wrap fieldset h3, html #wrap #apply_container .apply_wrap fieldset h3 {
+            text-align: center;
+            color: #fff;
+            font-size: 24px;
+            margin-top: 50px; }
+          body #wrap #apply_container .apply_wrap fieldset input, html #wrap #apply_container .apply_wrap fieldset input {
+            width: 100%;
+            height: 50px;
+            display: block;
+            text-align: center;
+            border: 1px solid #999;
+            margin-top: 20px; }
+            body #wrap #apply_container .apply_wrap fieldset input#apply_txt, html #wrap #apply_container .apply_wrap fieldset input#apply_txt {
+              height: 300px; }
+          body #wrap #apply_container .apply_wrap fieldset a, html #wrap #apply_container .apply_wrap fieldset a {
+            display: block;
+            width: 200px;
+            height: 50px;
+            margin: 50px auto;
+            text-align: center;
+            color: #fff;
+            background: #f6685e;
+            line-height: 50px; }
+    body #wrap #contact_container, html #wrap #contact_container {
+      width: 100vw;
+      min-height: 100vh;
+      z-index: 20;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #000;
+      display: none; }
+      body #wrap #contact_container .contact_tit, html #wrap #contact_container .contact_tit {
+        font-size: 66px;
+        position: absolute;
+        left: 50%;
+        margin-left: -262px;
+        top: 20%;
+        color: #f6685e;
+        letter-spacing: 12px; }
+      body #wrap #contact_container .contact_wrap, html #wrap #contact_container .contact_wrap {
+        width: 90vw;
+        height: 745px;
+        display: flex;
+        position: absolute;
+        left: 50%;
+        margin-left: -45vw;
+        top: 40%;
+        background: #1D1D1D; }
+        body #wrap #contact_container .contact_wrap .contact_txt_boxL, html #wrap #contact_container .contact_wrap .contact_txt_boxL {
+          width: 50%;
+          position: absolute;
+          left: 0; }
+          body #wrap #contact_container .contact_wrap .contact_txt_boxL p, html #wrap #contact_container .contact_wrap .contact_txt_boxL p {
+            color: #fff;
+            text-align: center;
+            padding-top: 40vh; }
+            body #wrap #contact_container .contact_wrap .contact_txt_boxL p .apply_txt_bold, html #wrap #contact_container .contact_wrap .contact_txt_boxL p .apply_txt_bold {
+              font-size: 18px;
+              font-weight: bold;
+              line-height: 24px; }
+            body #wrap #contact_container .contact_wrap .contact_txt_boxL p .yellow_line, html #wrap #contact_container .contact_wrap .contact_txt_boxL p .yellow_line {
+              background-color: #f2be36;
+              border-radius: 5px;
+              padding: 2px;
+              font-size: 12px;
+              vertical-align: middle; }
+            body #wrap #contact_container .contact_wrap .contact_txt_boxL p .num7_line, html #wrap #contact_container .contact_wrap .contact_txt_boxL p .num7_line {
+              display: inline-block;
+              width: 15px;
+              height: 15px;
+              background-color: #727718;
+              border-radius: 50%;
+              padding: 2px;
+              font-size: 12px;
+              text-align: center;
+              vertical-align: middle; }
+            body #wrap #contact_container .contact_wrap .contact_txt_boxL p .num3_line, html #wrap #contact_container .contact_wrap .contact_txt_boxL p .num3_line {
+              display: inline-block;
+              width: 15px;
+              height: 15px;
+              background-color: #ff8839;
+              border-radius: 50%;
+              padding: 2px;
+              font-size: 12px;
+              text-align: center;
+              vertical-align: middle; }
+        body #wrap #contact_container .contact_wrap .contact_txt_boxR, html #wrap #contact_container .contact_wrap .contact_txt_boxR {
+          width: 50%;
+          height: 100%;
+          position: absolute;
+          right: 0;
+          color: #fff;
+          text-align: center; }
+
+@media screen and (max-width: 800px) {
+  body #wrap #gnb, html #wrap #gnb {
+    height: 50px;
+    line-height: 0; }
+    body #wrap #gnb .gnb_logo, html #wrap #gnb .gnb_logo {
+      font-size: 30px;
+      position: absolute;
+      left: 50%;
+      margin-left: -59px;
+      padding-top: 25px; }
+    body #wrap #gnb .gnb_wrap .gnb_font, html #wrap #gnb .gnb_wrap .gnb_font {
+      display: none; }
+    body #wrap #gnb .gnb_wrap .m_gnb, html #wrap #gnb .gnb_wrap .m_gnb {
+      display: block;
+      position: absolute;
+      right: 20px;
+      top: 20px; }
+    body #wrap #gnb .gnb_wrap .m_gnb_menu, html #wrap #gnb .gnb_wrap .m_gnb_menu {
+      width: 100vw;
+      height: 100vh;
+      background: #000;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none; }
+      body #wrap #gnb .gnb_wrap .m_gnb_menu a, html #wrap #gnb .gnb_wrap .m_gnb_menu a {
+        color: #fff;
+        display: block;
+        position: absolute; }
+        body #wrap #gnb .gnb_wrap .m_gnb_menu a.m_gnb_menu_logo, html #wrap #gnb .gnb_wrap .m_gnb_menu a.m_gnb_menu_logo {
+          font-size: 30px;
+          left: 20px;
+          top: 20px; }
+        body #wrap #gnb .gnb_wrap .m_gnb_menu a.m_gnb_menu_close, html #wrap #gnb .gnb_wrap .m_gnb_menu a.m_gnb_menu_close {
+          font-size: 18px;
+          top: 20px;
+          right: 20px; }
+        body #wrap #gnb .gnb_wrap .m_gnb_menu a.m_gnb_menu_sel, html #wrap #gnb .gnb_wrap .m_gnb_menu a.m_gnb_menu_sel {
+          font-size: 36px;
+          left: 50%; }
+          body #wrap #gnb .gnb_wrap .m_gnb_menu a.m_gnb_menu_sel.m_gnb_menu1, html #wrap #gnb .gnb_wrap .m_gnb_menu a.m_gnb_menu_sel.m_gnb_menu1 {
+            top: 20%;
+            margin-left: -41.5px; }
+          body #wrap #gnb .gnb_wrap .m_gnb_menu a.m_gnb_menu_sel.m_gnb_menu2, html #wrap #gnb .gnb_wrap .m_gnb_menu a.m_gnb_menu_sel.m_gnb_menu2 {
+            top: 30%;
+            margin-left: -50px; }
+          body #wrap #gnb .gnb_wrap .m_gnb_menu a.m_gnb_menu_sel.m_gnb_menu3, html #wrap #gnb .gnb_wrap .m_gnb_menu a.m_gnb_menu_sel.m_gnb_menu3 {
+            top: 40%;
+            margin-left: -48.5px; }
+          body #wrap #gnb .gnb_wrap .m_gnb_menu a.m_gnb_menu_sel.m_gnb_menu4, html #wrap #gnb .gnb_wrap .m_gnb_menu a.m_gnb_menu_sel.m_gnb_menu4 {
+            top: 50%;
+            margin-left: -45px; }
+          body #wrap #gnb .gnb_wrap .m_gnb_menu a.m_gnb_menu_sel.m_gnb_menu5, html #wrap #gnb .gnb_wrap .m_gnb_menu a.m_gnb_menu_sel.m_gnb_menu5 {
+            top: 60%;
+            margin-left: -65px; }
+  body #wrap #landing_container, html #wrap #landing_container {
+    display: none; }
+  body #wrap #main_container, html #wrap #main_container {
+    background-size: cover;
+    background-position: center center;
+    display: block; }
+    body #wrap #main_container .main_tit, html #wrap #main_container .main_tit {
+      font-size: 60px; }
+    body #wrap #main_container .main_txt, html #wrap #main_container .main_txt {
+      font-size: 22px;
+      top: 50%; }
+    body #wrap #main_container .btn_models, html #wrap #main_container .btn_models {
+      bottom: 25%; }
+  body #wrap #models_container, html #wrap #models_container {
+    display: none; }
+    body #wrap #models_container .models_tit, html #wrap #models_container .models_tit {
+      font-size: 40px;
+      margin-left: -100.5px; }
+    body #wrap #models_container .models_wrap, html #wrap #models_container .models_wrap {
+      width: 100%;
+      left: 0;
+      margin-left: 0;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; }
+      body #wrap #models_container .models_wrap li .models_history, html #wrap #models_container .models_wrap li .models_history {
+        font-size: 12px; }
+      body #wrap #models_container .models_wrap li .models_name, html #wrap #models_container .models_wrap li .models_name {
+        font-size: 26px; }
+      body #wrap #models_container .models_wrap li.models_box1, html #wrap #models_container .models_wrap li.models_box1 {
+        grid-column: 1/-1;
+        grid-row: 1/2; }
+      body #wrap #models_container .models_wrap li.models_box2, html #wrap #models_container .models_wrap li.models_box2 {
+        grid-column: 1/-1;
+        grid-row: 3/4; }
+      body #wrap #models_container .models_wrap li.models_box3, html #wrap #models_container .models_wrap li.models_box3 {
+        grid-column: 1/-1;
+        grid-row: 2/3; }
+      body #wrap #models_container .models_wrap li.models_box4, html #wrap #models_container .models_wrap li.models_box4 {
+        grid-column: 1/-1;
+        grid-row: 4/5; }
+      body #wrap #models_container .models_wrap li.models_box5, html #wrap #models_container .models_wrap li.models_box5 {
+        display: none; }
+      body #wrap #models_container .models_wrap li.models_box6, html #wrap #models_container .models_wrap li.models_box6 {
+        grid-column: 1/-1;
+        grid-row: 5/6; }
+      body #wrap #models_container .models_wrap li.models_box7, html #wrap #models_container .models_wrap li.models_box7 {
+        display: none; }
+      body #wrap #models_container .models_wrap li.models_box8, html #wrap #models_container .models_wrap li.models_box8 {
+        grid-column: 1/-1;
+        grid-row: 6/7; }
+  body #wrap #about_container, html #wrap #about_container {
+    display: none; }
+    body #wrap #about_container .about_tit, html #wrap #about_container .about_tit {
+      font-size: 40px;
+      margin-left: -146.5px; }
+    body #wrap #about_container .about_wrap, html #wrap #about_container .about_wrap {
+      width: 100vw;
+      height: 500px;
+      left: 0;
+      margin-left: 0; }
+      body #wrap #about_container .about_wrap li.about_L p, html #wrap #about_container .about_wrap li.about_L p {
+        left: 50%;
+        margin-left: -87.5px; }
+      body #wrap #about_container .about_wrap li.about_R img, html #wrap #about_container .about_wrap li.about_R img {
+        object-fit: cover; }
+  body #wrap #apply_container, html #wrap #apply_container {
+    display: none; }
+    body #wrap #apply_container .apply_tit, html #wrap #apply_container .apply_tit {
+      font-size: 32px;
+      left: 0;
+      margin-left: 0;
+      text-align: center; }
+    body #wrap #apply_container .apply_wrap, html #wrap #apply_container .apply_wrap {
+      width: 100vw;
+      left: 0;
+      margin-left: 0; }
+      body #wrap #apply_container .apply_wrap fieldset, html #wrap #apply_container .apply_wrap fieldset {
+        width: 80vw; }
+  body #wrap #contact_container, html #wrap #contact_container {
+    display: none; }
+    body #wrap #contact_container .contact_tit, html #wrap #contact_container .contact_tit {
+      font-size: 40px;
+      margin-left: -182.5px; }
+    body #wrap #contact_container .contact_wrap, html #wrap #contact_container .contact_wrap {
+      width: 100vw;
+      height: 745px;
+      display: block;
+      left: 0;
+      margin-left: 0; }
+      body #wrap #contact_container .contact_wrap .contact_txt_boxL, html #wrap #contact_container .contact_wrap .contact_txt_boxL {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0; }
+        body #wrap #contact_container .contact_wrap .contact_txt_boxL p, html #wrap #contact_container .contact_wrap .contact_txt_boxL p {
+          height: 50%;
+          padding-top: 10vh; }
+      body #wrap #contact_container .contact_wrap .contact_txt_boxR, html #wrap #contact_container .contact_wrap .contact_txt_boxR {
+        width: 100%;
+        height: 50%;
+        bottom: 0; } }
+
+/*# sourceMappingURL=index.css.map */
