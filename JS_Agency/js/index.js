@@ -14,7 +14,6 @@ $('document').ready(function(){
     }
     $(window).resize(function(){
         windowWidth = $(window).width();
-        console.log(windowWidth);
         if(windowWidth<800){
             mobJs();
         } else if(windowWidth>=800){
